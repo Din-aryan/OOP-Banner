@@ -1,68 +1,26 @@
 /**
- * OOPSBannerApp
- *
- * UC3: Render OOPS as Banner using String.join()
- * Refactored version of UC2 to improve memory efficiency
- * and readability using String.join() instead of + operator.
- *
- * @author Varsha
- * @version 3.0
+ * OOPSBannerApp UC4
+ * Render OOPS as Banner using String Array and Loop
+ * * This use case improves upon UC3 by using a String array to store banner lines
+ * and iterating through them with a for-each loop, eliminating hardcoded print
+ * statements and improving modularity and reusability.
+ * * @author Developer
+ * @version 4 
  */
 public class OOPBannerApp {
-
-    /**
-     * Main method - Entry point of the application
-     * @param args Command-line arguments
-     */
     public static void main(String[] args) {
+        String[] lines = new String[7];
 
-        // Line 1
-        System.out.println(String.join(" ",
-                " ******* ",
-                " ******* ",
-                " ******* ",
-                " ******* "));
+        lines[0] = String.join("", "  ***** ", "  ***** ", " ******* ", "  ****** ");
+        lines[1] = String.join("", " ** ** ", " ** ** ", " **  ** ", "      ** ");
+        lines[2] = String.join("", " ** ** ", " ** ** ", " **  ** ", "      ** ");
+        lines[3] = String.join("", " ** ** ", " ** ** ", " ******* ",  "    ***** ");
+        lines[4] = String.join("", " ** ** ", " ** ** ", " ** ", "             ** ");
+        lines[5] = String.join("", " ** ** ", " ** ** ", " ** ", " **.         ** ");
+        lines[6] = String.join("", "  ***** ", "  ***** ", " ** ", "       ***** ");
 
-        // Line 2
-        System.out.println(String.join(" ",
-                " *     * ",
-                " *     * ",
-                " *     * ",
-                " *       "));
-
-        // Line 3
-        System.out.println(String.join(" ",
-                " *     * ",
-                " *     * ",
-                " *     * ",
-                " *       "));
-
-        // Line 4
-        System.out.println(String.join(" ",
-                " *     * ",
-                " *     * ",
-                " ******* ",
-                " ******* "));
-
-        // Line 5
-        System.out.println(String.join(" ",
-                " *     * ",
-                " *     * ",
-                " *       ",
-                "       * "));
-
-        // Line 6
-        System.out.println(String.join(" ",
-                " *     * ",
-                " *     * ",
-                " *       ",
-                "       * "));
-
-        // Line 7
-        System.out.println(String.join(" ",
-                " ******* ",
-                " ******* ",
-                " *       ",
-                " ******* "));
+        for (String line : lines) {
+            System.out.println(line);
+        }
     }
 }
